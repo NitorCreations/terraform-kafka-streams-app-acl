@@ -5,7 +5,7 @@ terraform {
 }
 
 resource "kafka_acl" "allow_idempotent_write_in_cluster" {
-  resource_name       = "*"
+  resource_name       = "kafka-cluster"
   resource_type       = "Cluster"
   acl_principal       = "${var.user_id}"
   acl_host            = "*"
