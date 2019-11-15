@@ -4,4 +4,5 @@ variable "user_id" {
 
 variable "application_id" {
     type = string
+    description= "The Kafka Streams application id for your app."
 }
