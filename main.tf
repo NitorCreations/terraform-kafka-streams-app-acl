@@ -4,15 +4,6 @@ terraform {
   }
 }
 
-resource "kafka_acl" "allow_topic_creation_in_cluster" {
-  resource_name       = "*"
-  resource_type       = "Cluster"
-  acl_principal       = "${var.user_id}"
-  acl_host            = "*"
-  acl_operation       = "Create"
-  acl_permission_type = "Allow"
-}
-
 resource "kafka_acl" "allow_idempotent_write_in_cluster" {
   resource_name       = "*"
   resource_type       = "Cluster"
